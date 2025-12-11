@@ -59,10 +59,10 @@ const TopBar = () => {
           <Phone size={16} />
           <span>+61 408 617 091</span>
         </div>
-        <div className="flex items-center gap-2 cursor-pointer hover:text-(--primary) transition-colors font-medium">
+        {/* <div className="flex items-center gap-2 cursor-pointer hover:text-(--primary) transition-colors font-medium">
           <User size={18} />
           <span>My Home</span>
-        </div>
+        </div> */}
       </div>
     </div>
   );
