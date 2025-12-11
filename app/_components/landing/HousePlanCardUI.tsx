@@ -16,7 +16,7 @@ import {
   Car,
   Ruler,
 } from "lucide-react";
-import { House, ViewMode } from "../_types/type";
+import { House, ViewMode } from "../../_types/type";
 import ResponsiveVideo from "../ui/ResponsiveVideo";
 
 interface HouseCardProps {

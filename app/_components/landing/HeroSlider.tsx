@@ -10,7 +10,7 @@ import {
   Variants,
 } from "framer-motion";
 import { ChevronLeft, ArrowRight } from "lucide-react";
-import { MediaType, SlideData } from "../_types/type";
+import { MediaType, SlideData } from "../../_types/type";
 import ResponsiveVideo from "../ui/ResponsiveVideo";
 
 interface HeroSliderProps {
@@ -171,7 +171,7 @@ const HeroSlider: React.FC<HeroSliderProps> = ({
       </AnimatePresence>
 
       {/* Persistent UI Elements (Text & Controls) */}
-      <div className="absolute inset-0 pointer-events-none flex flex-col justify-end pb-12 md:pb-24 px-6 md:px-16 max-w-[1920px] mx-auto">
+      <div className="absolute inset-0 pointer-events-none flex flex-col justify-end pb-12 md:pb-24 px-6 md:px-16 lg:px-24 max-w-8xl mx-auto">
         {/* Main Text Content */}
         <motion.div
           style={{ y: yText }}
@@ -186,11 +186,11 @@ const HeroSlider: React.FC<HeroSliderProps> = ({
               variants={textVariants}
               className="space-y-6"
             >
-              <p className="text-lg md:text-2xl text-gray-100 font-sans tracking-wide max-w-2xl leading-relaxed text-shadow-2xs">
+              <p className="text-lg md:text-2xl text-gray-100 font-sans tracking-wide leading-relaxed text-shadow-2xs">
                 {currentSlide.subtitle}
               </p>
 
-              <h1 className="text-6xl md:text-8xl lg:text-9xl font-serif leading-[0.9] text-gray-100">
+              <h1 className="text-6xl md:text-8xl lg:text-8xl 3xl:text-9xl! font-serif leading-[0.9] text-gray-100">
                 {currentSlide.title}
               </h1>
 

@@ -2,7 +2,7 @@
 import React, { useState } from "react";
 import { ArrowLeft, ArrowRight } from "lucide-react";
 import { motion } from "framer-motion";
-import { ViewMode } from "../_types/type";
+import { ViewMode } from "../../_types/type";
 import { HOUSE_DATA } from "./HousePlanCardData";
 import HouseCardUI from "./HousePlanCardUI";
 

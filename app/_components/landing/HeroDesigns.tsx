@@ -2,8 +2,9 @@
 
 import React from "react";
 import { motion } from "framer-motion";
-import { ArrowLeft, ArrowRight, MessageCircle, Plus } from "lucide-react";
+import { ArrowLeft, ArrowRight, Plus } from "lucide-react";
 import { Playfair_Display, Inter } from "next/font/google";
+import Image from "next/image";
 
 // Initialize Fonts
 const playfair = Playfair_Display({
@@ -18,15 +19,23 @@ const HeroDesigns = () => {
       className={`relative w-full h-screen min-h-[700px] overflow-hidden ${inter.className}`}
     >
       {/* --- BACKGROUND IMAGE --- */}
-      <div className="absolute inset-0 w-full h-full">
-        <img
-          src="/landing/bella-homes-2.jpg" // High-quality interior
+      <motion.div
+        initial={{ opacity: 0, scale: 1.1 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{ duration: 1.2, ease: "easeOut" }}
+        className="absolute inset-0 w-full h-full"
+      >
+        <Image
+          src="/landing/hero-design.jpg"
           alt="Luxury Home Interior"
-          className="w-full h-full object-cover"
+          fill
+          priority
+          className="object-cover"
+          quality={90}
         />
         {/* Dark Gradient Overlay (Subtle at top, heavy at bottom) */}
-        <div className="absolute inset-0 bg-gradient-to-b from-black/10 via-black/20 to-black/90" />
-      </div>
+        <div className="absolute inset-0 bg-linear-to-b from-black/10 via-black/20 to-black/90" />
+      </motion.div>
 
       {/* --- TOP RIGHT PLUS ICON --- */}
       <motion.button
@@ -60,9 +69,9 @@ const HeroDesigns = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ delay: 0.3, duration: 0.8 }}
-          className="w-full border-t border-white bg-black/10 backdrop-blur-md"
+          className="w-full border-t border-white/20 bg-black/10 backdrop-blur-md"
         >
-          <div className="max-w-[1400px] mx-auto px-6 py-8 md:py-10 flex flex-col xl:flex-row items-start xl:items-center justify-between gap-8">
+          <div className="max-w-8xl mx-auto px-6 md:mx-20 py-8 md:py-10 flex flex-col xl:flex-row items-start xl:items-center justify-between gap-8">
             {/* Left: Description Text */}
             <p className="text-white/90 text-sm md:text-base max-w-2xl leading-relaxed font-light">
               Bella Green Home is where inspiration and innovation comes to
@@ -78,7 +87,7 @@ const HeroDesigns = () => {
                 <motion.button
                   whileHover={{ scale: 1.03 }}
                   whileTap={{ scale: 0.97 }}
-                  className="px-8 py-3.5 bg-white text-green-500 rounded-full font-semibold text-sm tracking-wide shadow-lg hover:bg-gray-100 transition-colors"
+                  className="px-8 py-3.5 bg-white text-green-500 rounded-full font-semibold text-sm tracking-wide shadow-lg hover:bg-gray-100 transition-colors cursor-pointer"
                 >
                   View Home Designs
                 </motion.button>
@@ -86,18 +95,18 @@ const HeroDesigns = () => {
                 <motion.button
                   whileHover={{ scale: 1.03 }}
                   whileTap={{ scale: 0.97 }}
-                  className="px-8 py-3.5 bg-transparent border border-white text-white rounded-full font-medium text-sm tracking-wide hover:bg-white/10 transition-colors"
+                  className="px-8 py-3.5 bg-transparent border-2 border-white/20 text-white rounded-full font-medium text-sm tracking-wide hover:bg-white/10 transition-colors cursor-pointer"
                 >
                   View House & Land
                 </motion.button>
               </div>
 
               {/* Navigation Arrows */}
-              <div className="flex items-center gap-3 hidden md:flex">
-                <button className="w-12 h-12 rounded-full bg-white flex items-center justify-center text-black hover:bg-gray-200 transition-colors">
+              <div className="items-center gap-3 flex md:flex">
+                <button className="w-12 h-12 rounded-full bg-white flex items-center justify-center text-black hover:bg-gray-200 transition-colors cursor-pointer">
                   <ArrowLeft size={20} />
                 </button>
-                <button className="w-12 h-12 rounded-full bg-white flex items-center justify-center text-black hover:bg-gray-200 transition-colors">
+                <button className="w-12 h-12 rounded-full bg-white flex items-center justify-center text-black hover:bg-gray-200 transition-colors cursor-pointer">
                   <ArrowRight size={20} />
                 </button>
               </div>

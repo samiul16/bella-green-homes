@@ -1,4 +1,4 @@
-import { House } from "../_types/type";
+import { House } from "../../_types/type";
 
 // Using high-quality placeholder images and videos
 export const HOUSE_DATA: House[] = [

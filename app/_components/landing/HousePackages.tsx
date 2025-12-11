@@ -47,7 +47,7 @@ const HousePackages = () => {
       className={`w-full bg-[#FAF9F6] text-[#1a1a1a] pt-24 ${inter.className}`}
     >
       {/* --- TOP HEADER SECTION --- */}
-      <div className="max-w-[1400px] mx-auto px-6 md:px-12 mb-16">
+      <div className="max-w-8xl mx-auto px-6 md:px-16 mb-16">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
           {/* Headline */}
           <motion.h2
@@ -87,14 +87,14 @@ const HousePackages = () => {
 
       {/* --- CONTROL BAR --- */}
       <div className="border-t border-b border-[#E5E5E5] bg-[#FAF9F6] sticky top-0 z-10">
-        <div className="max-w-[1400px] mx-auto px-6 md:px-12 h-16 flex items-center justify-between">
+        <div className="max-w-8xl mx-auto px-6 md:px-16 h-16 flex items-center justify-between">
           {/* Tabs */}
           <div className="flex h-full">
-            <button className="relative h-full px-2 mr-6 text-sm font-medium text-black flex items-center">
+            <button className="relative h-full px-2 mr-6 text-sm font-medium text-black flex items-center cursor-pointer">
               House and Land Packages
               <span className="absolute bottom-0 left-0 w-full h-[3px] bg-(--primary)"></span>
             </button>
-            <button className="h-full px-2 text-sm font-medium text-gray-500 hover:text-black transition-colors flex items-center">
+            <button className="h-full px-2 text-sm font-medium text-gray-500 hover:text-black transition-colors flex items-center cursor-pointer">
               Estates
             </button>
           </div>
@@ -110,10 +110,10 @@ const HousePackages = () => {
           <div className="flex items-center gap-4 text-gray-400 text-xs tracking-widest font-medium">
             <span>01 / 09</span>
             <div className="flex gap-2">
-              <button className="w-8 h-8 rounded-full border border-gray-300 flex items-center justify-center hover:bg-white hover:text-black transition-colors">
+              <button className="w-8 h-8 rounded-full border border-gray-300 flex items-center justify-center hover:bg-white hover:text-black transition-colors cursor-pointer shadow-xs">
                 <ArrowLeft size={14} />
               </button>
-              <button className="w-8 h-8 rounded-full border border-gray-300 flex items-center justify-center hover:bg-white hover:text-black transition-colors">
+              <button className="w-8 h-8 rounded-full border border-gray-300 flex items-center justify-center hover:bg-white hover:text-black transition-colors cursor-pointer shadow-xs">
                 <ArrowRight size={14} />
               </button>
             </div>
@@ -121,13 +121,13 @@ const HousePackages = () => {
         </div>
       </div>
 
-      <div className="max-w-[1400px] mx-auto grid grid-cols-1 md:grid-cols-2 border-b border-[#E5E5E5]">
+      <div className="max-w-8xl px-4 md:px-16 mx-auto grid grid-cols-1 md:grid-cols-2 border-b border-[#E5E5E5]">
         {packages.map((item, index) => (
           <div
             key={item.id}
             className={`group relative p-6 md:p-12 lg:p-16 flex flex-col cursor-pointer transition-all duration-500
         ${index === 0 ? "md:border-r border-[#E5E5E5]" : ""}
-        bg-white hover:bg-(--primary)/60
+        bg-white/80 hover:bg-(--primary)/60
       `}
           >
             {/* ───── TITLE (moves inside image bottom on hover) ───── */}

@@ -1,6 +1,6 @@
 import React from "react";
 
-import { MediaType, SlideData } from "../_types/type";
+import { MediaType, SlideData } from "../../_types/type";
 import HeroSlider from "./HeroSlider";
 
 // Mock Data representing the design provided
