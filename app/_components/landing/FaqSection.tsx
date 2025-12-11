@@ -83,14 +83,14 @@ export default function FaqSection() {
     <section
       className={`bg-[#F9F4EF] py-20 px-4 md:px-8 border-t border-b border-[#E5E0DB] ${playfair.variable} ${inter.variable}`}
     >
-      <div className="max-w-[1400px] mx-auto">
+      <div className="max-w-8xl mx-auto px-4 md:px-16">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-y-12 lg:gap-x-20">
           {/* Left Column: Text Content */}
           <div className="lg:col-span-5 flex flex-col justify-start pt-2">
-            <h2 className="font-serif text-4xl md:text-[42px] text-[#1a1a1a] mb-8 leading-[1.15]">
+            <h2 className="font-serif text-4xl md:text-6xl text-[#1a1a1a] mb-8 leading-[1.15]">
               New home builders frequently asked questions
             </h2>
-            <div className="font-sans text-[#4a4a4a] text-[13px] leading-7 tracking-wide space-y-6 max-w-md">
+            <div className="font-sans text-[#4a4a4a] text-base leading-7 tracking-wide space-y-6 max-w-md">
               <p>
                 Building your dream home should be an enjoyable experience, and
                 with quite a few things to consider, a key step in this process
@@ -119,17 +119,17 @@ export default function FaqSection() {
               <div key={index} className="border-b border-[#D3CEC9]">
                 <button
                   onClick={() => toggleAccordion(index)}
-                  className="w-full py-5 flex items-center justify-between text-left group transition-colors hover:bg-black/5 px-2"
+                  className="w-full py-5 flex items-center justify-between text-left group transition-colors hover:bg-black/5 px-2 cursor-pointer"
                   aria-expanded={openIndex === index}
                 >
                   <span className="font-serif text-[19px] text-[#1a1a1a] pr-6">
                     {faq.question}
                   </span>
-                  <span className="flex-shrink-0 ml-4">
+                  <span className="shrink-0 ml-4">
                     {openIndex === index ? (
-                      <Minus className="w-3 h-3 text-black stroke-[3]" />
+                      <Minus className="w-3 h-3 text-black stroke-3" />
                     ) : (
-                      <Plus className="w-3 h-3 text-black stroke-[3]" />
+                      <Plus className="w-3 h-3 text-black stroke-3" />
                     )}
                   </span>
                 </button>
