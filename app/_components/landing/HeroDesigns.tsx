@@ -26,7 +26,7 @@ const HeroDesigns = () => {
         className="absolute inset-0 w-full h-full"
       >
         <Image
-          src="/landing/hero-design.jpg"
+          src="/landing/bella-bed.jpg"
           alt="Luxury Home Interior"
           fill
           priority
