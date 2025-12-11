@@ -1,0 +1,90 @@
+@import "tailwindcss";
+
+:root {
+  --background: #f8f1eb;
+  --foreground: #171717;
+  --primary: #12a807;
+}
+
+@theme {
+  --breakpoint-xs: 400px;
+}
+
+html {
+  scroll-padding-top: 80px;
+}
+
+html.lenis,
+html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+.lenis.lenis-scrolling iframe {
+  pointer-events: none;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-geist-mono), monospace;
+  overflow-x: hidden;
+}
+
+/* Custom Scrollbar Styling */
+::-webkit-scrollbar {
+  width: 12px;
+  height: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--background);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--primary);
+  border-radius: 10px;
+  border: 2px solid var(--background);
+  transition: background 0.3s ease;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #12a807;
+}
+
+/* Firefox Scrollbar */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--primary) var(--background);
+}
+
+@keyframes slowWave {
+  0% {
+    transform: translateY(0px) scale(1);
+    opacity: 0.25;
+  }
+  50% {
+    transform: translateY(-12px) scale(1.02);
+    opacity: 0.3;
+  }
+  100% {
+    transform: translateY(0px) scale(1);
+    opacity: 0.25;
+  }
+}
+
+.wave-lines {
+  animation: slowWave 6s ease-in-out infinite;
+}
