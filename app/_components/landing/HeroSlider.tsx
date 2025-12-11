@@ -10,6 +10,7 @@ import {
   Variants,
 } from "framer-motion";
 import { ChevronLeft, ArrowRight } from "lucide-react";
+import Image from "next/image";
 import { MediaType, SlideData } from "../../_types/type";
 import ResponsiveVideo from "../ui/ResponsiveVideo";
 
@@ -157,9 +158,14 @@ const HeroSlider: React.FC<HeroSliderProps> = ({
                 className="w-full h-full object-cover"
               />
             ) : (
-              <div
-                className="w-full h-full bg-cover bg-center"
-                style={{ backgroundImage: `url(${currentSlide.src})` }}
+              <Image
+                src={currentSlide.src}
+                alt={currentSlide.title || "Hero slide"}
+                fill
+                priority={currentIndex === 0}
+                quality={90}
+                sizes="100vw"
+                className="object-cover"
               />
             )}
 
