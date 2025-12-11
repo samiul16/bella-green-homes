@@ -86,7 +86,7 @@ const LinkGroup: React.FC<LinkGroupProps> = ({ title, links }) => (
             className="text-brand-dark/80 hover:text-brand-red transition-colors duration-200 text-sm font-medium block relative group overflow-hidden"
           >
             <span className="relative z-10">{link}</span>
-            <span className="absolute left-0 bottom-0 w-full h-[1px] bg-brand-red transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></span>
+            <span className="absolute left-0 bottom-0 w-full h-px bg-brand-red transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></span>
           </a>
         </li>
       ))}
@@ -111,7 +111,7 @@ const Footer: React.FC = () => {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.6, delay: 0.2 }}
-        className="border-b border-brand-dark/10"
+        className="border-b border-black/20"
       >
         <div className="max-w-8xl mx-auto px-4 md:px-20 py-10">
           <div className="flex flex-col lg:flex-row items-center justify-between gap-8 lg:gap-0">
@@ -175,7 +175,7 @@ const Footer: React.FC = () => {
               <motion.button
                 whileHover={{ scale: 1.05, y: -2 }}
                 whileTap={{ scale: 0.95 }}
-                className="bg-white hover:bg-[#12a807] hover:text-white text-black font-semibold py-2.5 px-6 rounded-full shadow-xs transition-all duration-300 border border-black/20 border-brand-dark/5 text-sm cursor-pointer"
+                className="bg-white hover:bg-[#12a807] hover:text-white text-black font-semibold py-2.5 px-6 rounded-full shadow-xs transition-all duration-300 border border-black/20 text-sm cursor-pointer"
               >
                 Contact Us
               </motion.button>
@@ -265,7 +265,7 @@ const Footer: React.FC = () => {
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.9 }}
-          className="mt-16 pt-8 border-t border-brand-dark/10 flex flex-col md:flex-row justify-between items-center text-xs text-brand-dark/50 gap-4"
+          className="mt-16 pt-8 border-t border-black/20 flex flex-col md:flex-row justify-between items-center text-xs gap-4"
         >
           <p>© 2025 Bella Homes Pty Ltd. All Rights Reserved.</p>
           <div className="flex gap-6">
