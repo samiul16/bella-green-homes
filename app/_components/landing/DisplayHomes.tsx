@@ -57,7 +57,7 @@ const locations: Location[] = [
     address: "4 Noah St, Box Hill NSW 2765",
     homesOnDisplay: 5,
     houseName: "Charisma 37",
-    image: "/landing/bella-homes.jpg",
+    image: "/landing/2.avif",
     stats: { bed: 5, bath: 2, living: 1, garage: 4, sq: "12.5m" },
   },
   {
@@ -84,8 +84,8 @@ const LocationCard = ({ data, index }: { data: Location; index: number }) => {
   const y = useMotionValue(0);
 
   // Smooth out the mouse movements
-  const xSpring = useSpring(x, { stiffness: 300, damping: 30 });
-  const ySpring = useSpring(y, { stiffness: 300, damping: 30 });
+  const xSpring = useSpring(x, { stiffness: 900, damping: 25 });
+  const ySpring = useSpring(y, { stiffness: 300, damping: 25 });
 
   const transform = useMotionTemplate`perspective(1000px) rotateX(${ySpring}deg) rotateY(${xSpring}deg)`;
 
@@ -122,29 +122,29 @@ const LocationCard = ({ data, index }: { data: Location; index: number }) => {
       className="group relative flex flex-col h-full bg-[#333333] border-r border-white/10 last:border-r-0 hover:z-10"
     >
       {/* --- Top Info Section --- */}
-      <div className="p-8 pb-6 min-h-[160px] flex flex-col justify-between relative z-20 bg-[#333333]">
+      <div className="p-8 pb-6 min-h-[160px] flex flex-col justify-between relative z-20">
         <div className="space-y-3">
           <div className="flex justify-between items-start gap-4">
             <h3
-              className="font-['Playfair_Display'] text-2xl md:text-3xl leading-tight text-white group-hover:text-gray-100 transition-colors"
+              className="font-['Playfair_Display'] text-2xl md:text-2xl leading-tight text-white/80 group-hover:text-gray-100 transition-colors font-semibold"
               dangerouslySetInnerHTML={{
                 __html: data.name.replace(" ", "<br/>"),
               }}
             />
             {/* Animated Button Reveal */}
-            <div className="absolute top-8 right-8 overflow-hidden">
+            <div className="">
               <motion.button
                 initial={{ y: "100%", opacity: 0 }}
                 whileHover={{ scale: 1.05 }}
-                className="hidden lg:block bg-[#D92323] text-white text-[10px] font-bold px-4 py-2 rounded-full uppercase tracking-widest shadow-lg translate-y-full opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300 ease-out"
+                className="bg-[#12a807] text-white text-[10px] font-bold px-4 py-2 rounded-full uppercase tracking-widest shadow-lg translate-y-full opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300 ease-out"
               >
                 View Display
               </motion.button>
             </div>
           </div>
-          <div className="flex items-start gap-2 text-gray-400 group-hover:text-gray-300 transition-colors">
+          <div className="flex items-start gap-2 text-gray-300/80 group-hover:text-gray-300 transition-colors">
             <MapPin size={14} className="mt-1 shrink-0" />
-            <p className="text-xs leading-relaxed max-w-[200px] font-['Inter']">
+            <p className="text-xs leading-relaxed max-w-[400px] font-['Inter']">
               {data.address}
             </p>
           </div>
@@ -152,11 +152,11 @@ const LocationCard = ({ data, index }: { data: Location; index: number }) => {
       </div>
 
       {/* --- Image Section with Parallax Zoom --- */}
-      <div className="relative w-full aspect-4/5 overflow-hidden">
+      <div className="relative w-full aspect-square overflow-hidden">
         {/* Floating Tag */}
         <div className="absolute top-4 left-0 w-full z-20 flex justify-center pointer-events-none">
-          <div className="bg-black/60 backdrop-blur-md px-3 py-1.5 rounded-full border border-white/10">
-            <span className="text-[10px] font-bold tracking-[0.2em] uppercase text-white">
+          <div className="bg-black/60 backdrop-blur-2xl px-3 py-1 rounded-full border border-white/10">
+            <span className="text-[10px] font-bold tracking-[0.2em] uppercase text-white/80">
               {data.homesOnDisplay} Homes On Display
             </span>
           </div>
@@ -180,17 +180,17 @@ const LocationCard = ({ data, index }: { data: Location; index: number }) => {
 
         {/* Floating Action Icons (Top Right) */}
         <div className="absolute top-4 right-4 z-20 flex flex-col gap-3 translate-x-10 opacity-0 group-hover:translate-x-0 group-hover:opacity-100 transition-all duration-300 ease-out delay-75">
-          <button className="w-10 h-10 bg-white/10 backdrop-blur-md border border-white/20 rounded-full flex items-center justify-center text-white hover:bg-white hover:text-black transition-all duration-300 hover:scale-110">
+          <button className="w-10 h-10 bg-white/10 backdrop-blur-md border border-white/20 rounded-full flex items-center justify-center text-white hover:bg-white hover:text-black transition-all duration-300 hover:scale-110 cursor-pointer shadow-xs">
             <Heart size={16} />
           </button>
-          <button className="w-10 h-10 bg-white/10 backdrop-blur-md border border-white/20 rounded-full flex items-center justify-center text-white hover:bg-white hover:text-black transition-all duration-300 hover:scale-110">
+          <button className="w-10 h-10 bg-white/10 backdrop-blur-md border border-white/20 rounded-full flex items-center justify-center text-white hover:bg-white hover:text-black transition-all duration-300 hover:scale-110 cursor-pointer shadow-xs">
             <Share2 size={16} />
           </button>
         </div>
 
         {/* Bottom Interactive Area */}
         <div className="absolute bottom-0 left-0 w-full p-6 z-20 flex items-center justify-between">
-          <button className="w-10 h-10 rounded-full border border-white/30 text-white flex items-center justify-center hover:bg-white hover:text-black hover:border-white transition-all duration-300 backdrop-blur-sm -translate-x-4 opacity-0 group-hover:translate-x-0 group-hover:opacity-100">
+          <button className="w-10 h-10 rounded-full border border-white/30 text-white flex items-center justify-center hover:bg-white hover:text-black hover:border-white transition-all duration-300 backdrop-blur-sm -translate-x-4 opacity-0 group-hover:translate-x-0 group-hover:opacity-100 cursor-pointer shadow-xs">
             <ArrowLeft size={18} />
           </button>
 
@@ -203,14 +203,14 @@ const LocationCard = ({ data, index }: { data: Location; index: number }) => {
             </span>
           </div>
 
-          <button className="w-10 h-10 rounded-full bg-white text-black flex items-center justify-center hover:bg-[#D92323] hover:text-white transition-all duration-300 shadow-lg translate-x-4 opacity-0 group-hover:translate-x-0 group-hover:opacity-100">
+          <button className="w-10 h-10 rounded-full bg-white text-black flex items-center justify-center hover:bg-[#12a807] hover:text-white transition-all duration-300 translate-x-4 opacity-0 group-hover:translate-x-0 group-hover:opacity-100 shadow-xs cursor-pointer">
             <ArrowRight size={18} />
           </button>
         </div>
       </div>
 
       {/* --- Stats Footer --- */}
-      <div className="mt-auto px-6 py-5 border-t border-white/10 flex items-center justify-between text-gray-400 text-xs font-['Inter'] bg-[#333333] relative z-20">
+      <div className="mt-auto px-6 py-5 border-t border-white/10 flex items-center justify-between text-gray-300 text-xs font-['Inter'] bg-[#333333] relative z-20">
         <StatItem
           icon={<BedDouble size={16} />}
           value={data.stats.bed}
@@ -251,7 +251,7 @@ const StatItem = ({
   label: string;
 }) => (
   <div className="flex flex-col items-center gap-1 group/stat cursor-default">
-    <div className="text-gray-500 group-hover/stat:text-white transition-colors duration-300">
+    <div className="text-gray-400 group-hover/stat:text-white transition-colors duration-300">
       {icon}
     </div>
     <span className="font-medium">{value}</span>
