@@ -112,7 +112,7 @@ const HousePackages = () => {
       </div>
 
       {/* --- Cards Grid --- */}
-      <div className="max-w-8xl px-4 md:px-16 mx-auto grid grid-cols-1 md:grid-cols-2 border-b border-[#E5E5E5]">
+      <div className="max-w-8xl mx-auto px-4 md:px-16 grid grid-cols-1 md:grid-cols-2 border-b border-[#E5E5E5]">
         {packages.map((item, index) => (
           <div
             key={item.id}
