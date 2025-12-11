@@ -68,11 +68,11 @@ function HousePlanCard() {
           </div>
 
           {/* Center: Main CTA */}
-          <div className="hidden md:block">
+          {/* <div className="hidden md:block">
             <button className="bg-(--primary) hover:bg-(--primary)/80 text-slate-100 border border-gray-200 px-8 py-3 rounded-full text-brand-red font-semibold hover:border-brand-red shadow transition-all duration-300 cursor-pointer">
               View Home Designs
             </button>
-          </div>
+          </div> */}
 
           {/* Right: Navigation Controls */}
           <div className="flex items-center gap-6">
@@ -141,6 +141,13 @@ function HousePlanCard() {
           </motion.div>
         </div>
       </main>
+
+      {/* Center: Main CTA */}
+      <div className="hidden md:block text-center">
+        <button className="bg-(--primary) hover:bg-(--primary)/80 text-slate-100 border border-gray-200 px-8 py-3 rounded-full text-brand-red font-semibold hover:border-brand-red shadow transition-all duration-300 cursor-pointer">
+          View Home Designs
+        </button>
+      </div>
     </div>
   );
 }

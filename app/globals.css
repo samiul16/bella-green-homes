@@ -61,9 +61,9 @@ body {
   transition: background 0.3s ease;
 }
 
-::-webkit-scrollbar-thumb:hover {
+/* ::-webkit-scrollbar-thumb:hover {
   background: #12a807;
-}
+} */
 
 /* Firefox Scrollbar */
 * {
