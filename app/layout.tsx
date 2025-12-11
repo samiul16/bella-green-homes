@@ -26,7 +26,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${jetbrainsMono.variable} font-mono antialiased`}>
-        {/* <SmoothScroll /> */}
+        <SmoothScroll />
         <div className="overflow-x-hidden!">
           <Navbar />
           {children}
