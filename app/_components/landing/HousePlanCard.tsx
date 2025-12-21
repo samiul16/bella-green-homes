@@ -144,7 +144,7 @@ function HousePlanCard() {
 
       {/* Center: Main CTA */}
       <div className="hidden md:block text-center">
-        <button className="bg-(--primary) hover:bg-(--primary)/80 text-slate-100 border border-gray-200 px-8 py-3 rounded-full text-brand-red font-semibold hover:border-brand-red shadow transition-all duration-300 cursor-pointer">
+        <button className="hover:bg-(--primary)/80 text-slate-800 border-2 border-(--primary)/80 px-8 py-3 rounded-full text-brand-red font-semibold hover:border-brand-red shadow transition-all duration-300 cursor-pointer">
           View Home Designs
         </button>
       </div>

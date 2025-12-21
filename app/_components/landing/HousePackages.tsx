@@ -92,7 +92,7 @@ const HousePackages = () => {
           </div>
 
           <div className="hidden md:block absolute left-1/2 -translate-x-1/2">
-            <button className="bg-[#12a807] hover:bg-[#12a807]/80 text-white px-8 py-3 rounded-full text-sm font-semibold shadow transition-all duration-300 cursor-pointer">
+            <button className=" hover:bg-[#12a807]/80 text-slate-800 px-8 py-3 rounded-full text-sm font-semibold shadow transition-all duration-300 cursor-pointer border-2 border-(--primary)/80">
               View All Packages
             </button>
           </div>

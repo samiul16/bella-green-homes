@@ -100,7 +100,7 @@ const HouseCardUI: React.FC<HouseCardProps> = ({ house, viewMode }) => {
             <h2 className="text-3xl font-serif text-brand-dark">
               {house.name}
             </h2>
-            <button className="bg-(--primary) hover:bg-(--primary)/80 text-slate-100 border border-gray-200 px-6 py-2.5 rounded-full text-brand-red font-semibold hover:border-brand-red shadow transition-all duration-300 cursor-pointer text-sm">
+            <button className="hover:bg-(--primary)/80 text-slate-800 border-2 border-(--primary)/80 px-6 py-2.5 rounded-full text-brand-red font-semibold hover:border-brand-red shadow transition-all duration-300 cursor-pointer text-sm">
               View Home Design
             </button>
           </div>
