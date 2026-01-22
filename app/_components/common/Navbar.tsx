@@ -57,7 +57,7 @@ const TopBar = () => {
       <div className="flex items-center space-x-8">
         <div className="flex items-center gap-2 font-medium">
           <Phone size={16} />
-          <span>+61 408 617 091</span>
+          <span>0408 61 70 91</span>
         </div>
         {/* <div className="flex items-center gap-2 cursor-pointer hover:text-(--primary) transition-colors font-medium">
           <User size={18} />
@@ -101,20 +101,26 @@ const Navigation = ({ isScrolled }: { isScrolled: boolean }) => {
 
           {/* Desktop Links */}
           <div className="hidden lg:flex items-center space-x-8">
-            <NavLink text="House Designs" linkClasses={linkClasses} />
-            <NavLink text="Display Homes" linkClasses={linkClasses} />
+            {/* <NavLink text="House Designs" linkClasses={linkClasses} />
+            <NavLink text="Display Homes" linkClasses={linkClasses} /> */}
             {/* <NavLink text="House & Land" linkClasses={linkClasses} /> */}
             {/* <NavLink text="Build With Us" linkClasses={linkClasses} /> */}
-            <a
+            {/* <a
               href="#"
               className={`font-medium text-[15px] transition-colors duration-300 ${linkClasses}`}
             >
               Offers
-            </a>
+            </a> */}
             {/* <NavLink text="Inspo" linkClasses={linkClasses} /> */}
             <a
               href="#"
-              className={`font-medium text-[15px] transition-colors duration-300 ${linkClasses}`}
+              className={`font-medium text-[20px] transition-colors duration-300 ${linkClasses}`}
+            >
+              About
+            </a>
+            <a
+              href="#"
+              className={`font-medium text-[20px] transition-colors duration-300 ${linkClasses}`}
             >
               Contact
             </a>
@@ -122,19 +128,14 @@ const Navigation = ({ isScrolled }: { isScrolled: boolean }) => {
 
           {/* Actions */}
           <div className="flex items-center space-x-4">
-            {/* CTA Button */}
-            <button
+            {/* <button
               className={`hidden cursor-pointer lg:flex items-center gap-2 px-5 py-2 shadow rounded-full font-bold text-sm transition-all duration-300 ${pillBtnClasses}`}
             >
               <span className="text-lg font-serif italic">$</span> Build & Price
             </button>
-
-            {/* Filter Button */}
             <button className="hidden lg:flex items-center justify-center w-10 h-10 rounded-full bg-[#12a807] text-white hover:bg-[#12a807]/70 transition-colors shadow cursor-pointer">
               <SlidersHorizontal size={18} />
             </button>
-
-            {/* Search Button */}
             <button
               className={`flex items-center justify-center w-10 h-10 rounded-full transition-all duration-300 cursor-pointer ${
                 isScrolled
@@ -143,9 +144,7 @@ const Navigation = ({ isScrolled }: { isScrolled: boolean }) => {
               }`}
             >
               <Search size={18} />
-            </button>
-
-            {/* Mobile Menu Toggle */}
+            </button> */}
             <button
               className={`lg:hidden flex cursor-pointer items-center justify-center w-10 h-10 ${
                 isScrolled ? "text-slate-900" : "text-white"
@@ -183,7 +182,7 @@ const Navigation = ({ isScrolled }: { isScrolled: boolean }) => {
             </button>
           </div>
           <div className="flex flex-col space-y-6 text-lg font-medium text-slate-800">
-            <a
+            {/* <a
               href="#"
               className="flex justify-between items-center border-b pb-2"
             >
@@ -194,16 +193,19 @@ const Navigation = ({ isScrolled }: { isScrolled: boolean }) => {
               className="flex justify-between items-center border-b pb-2"
             >
               Display Homes <Plus size={16} />
-            </a>
+            </a> */}
             <a
               href="#"
               className="flex justify-between items-center border-b pb-2"
             >
-              Offers
+              Contact
             </a>
-            <button className="bg-[#12a807] hover:bg-[#12a807]/80 transition-all duration-300 text-white py-3 rounded-full w-full font-bold mt-4 cursor-pointer">
+            <a href="#" className="flex justify-between items-center">
+              About
+            </a>
+            {/* <button className="bg-[#12a807] hover:bg-[#12a807]/80 transition-all duration-300 text-white py-3 rounded-full w-full font-bold mt-4 cursor-pointer">
               Build & Price
-            </button>
+            </button> */}
           </div>
         </div>
       </div>
