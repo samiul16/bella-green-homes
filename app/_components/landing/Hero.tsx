@@ -1,55 +1,60 @@
 import React from "react";
-
 import { MediaType, SlideData } from "../../_types/type";
 import HeroSlider from "./HeroSlider";
 
-// Mock Data representing the design provided
+// Updated Data to align with:
+// Services: Single/Double Storey, Duplex, Townhouses, Custom, Granny Flats, NDIS.
+// Context: Sydney Metropolitan, Est. 2021.
+
 const slides: SlideData[] = [
   {
     id: 1,
     type: MediaType.VIDEO,
-    // Using a reliable high-quality architectural video link
     src: "/landing/1.mp4",
-    posterImage: "/landing/2.avif", // Shows while video loads
-    title: "Modern Aesthetics",
+    posterImage: "/landing/5.avif",
+    title: "Bespoke Custom Builds",
     subtitle:
-      "Experience the perfect blend of functionality and artistic expression in our latest architectural achievements.",
-    ctaText: "View Gallery",
+      "Since 2021, Bella Green Homes has been defining the Sydney Metropolitan skyline with luxury custom-built residences tailored to your vision.",
+    ctaText: "Start Your Journey",
   },
   {
     id: 2,
     type: MediaType.IMAGE,
     src: "/landing/2.avif",
-    title: "Duplex home designs",
+    title: "Single & Double Storey",
     subtitle:
-      "Live in one and live off the other, with one of our contemporary Duplex house designs for new home builders.",
-    ctaText: "Duplex Designs",
+      "Architecturally designed homes for modern Australian families. Discover our premium collection of single and double-storey masterpieces.",
+    ctaText: "View Home Designs",
   },
   {
     id: 3,
     type: MediaType.VIDEO,
     src: "/landing/3.mp4",
-    posterImage: "/landing/4.avif", // Shows while video loads
-    title: "Interior Spaces",
+    posterImage: "/landing/4.avif",
+    title: "Duplex & Townhouses",
     subtitle:
-      "Open plan living that brings the family together while maximizing natural light and air flow.",
-    ctaText: "Explore Interiors",
+      "Maximize your land's potential. We specialize in high-yield Duplex and Townhouse developments across Sydney's growing suburbs.",
+    ctaText: "Investment Solutions",
   },
   {
     id: 4,
     type: MediaType.IMAGE,
     src: "/landing/4.avif",
-    title: "Urban Living",
+    title: "Specialized Living",
     subtitle:
-      "Designed for the compact urban environment without compromising on luxury or privacy.",
-    ctaText: "Urban Portfolio",
+      "From high-quality Granny Flats to NDIS-approved Group Homes (SDA), we build for diversity, accessibility, and comfort.",
+    ctaText: "Specialized Services",
   },
 ];
 
 const App: React.FC = () => {
   return (
     <main className="w-full min-h-screen">
-      <HeroSlider slides={slides} autoPlayInterval={20000} />
+      {/* 
+        Increased autoPlayInterval to 8000 (8 seconds) 
+        so users have time to read the new business-specific subtitles.
+      */}
+      <HeroSlider slides={slides} autoPlayInterval={8000} />
     </main>
   );
 };

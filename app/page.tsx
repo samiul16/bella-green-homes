@@ -22,7 +22,7 @@ export default function page() {
       <HeroDesigns />
       {/* <HousePackages /> */}
       {/* <DisplayHomes /> */}
-      <WhyBellaGreen />
+      {/* <WhyBellaGreen /> */}
       {/* <FaqSection /> */}
     </div>
   );

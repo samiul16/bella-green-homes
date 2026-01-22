@@ -11,6 +11,7 @@ import {
   Menu,
   X,
 } from "lucide-react";
+import Link from "next/link";
 
 // NavLink Component
 const NavLink = ({
@@ -47,12 +48,12 @@ const TopBar = () => {
         </div>
       </div>
 
-      <a
+      {/* <a
         href="#"
         className="font-semibold text-gray-600 hover:underline decoration-2 underline-offset-4 transition-all"
       >
         Build & price your new home
-      </a>
+      </a> */}
 
       <div className="flex items-center space-x-8">
         <div className="flex items-center gap-2 font-medium">
@@ -98,34 +99,29 @@ const Navigation = ({ isScrolled }: { isScrolled: boolean }) => {
           >
             Bella Green
           </div>
-
           {/* Desktop Links */}
           <div className="hidden lg:flex items-center space-x-8">
-            {/* <NavLink text="House Designs" linkClasses={linkClasses} />
-            <NavLink text="Display Homes" linkClasses={linkClasses} /> */}
-            {/* <NavLink text="House & Land" linkClasses={linkClasses} /> */}
-            {/* <NavLink text="Build With Us" linkClasses={linkClasses} /> */}
-            {/* <a
-              href="#"
-              className={`font-medium text-[15px] transition-colors duration-300 ${linkClasses}`}
+            <Link
+              href="/services"
+              className={`font-medium text-[20px] transition-colors duration-300 ${linkClasses}`}
             >
-              Offers
-            </a> */}
-            {/* <NavLink text="Inspo" linkClasses={linkClasses} /> */}
-            <a
-              href="#"
+              Services
+            </Link>
+
+            <Link
+              href="/about"
               className={`font-medium text-[20px] transition-colors duration-300 ${linkClasses}`}
             >
               About
-            </a>
-            <a
-              href="#"
+            </Link>
+
+            <Link
+              href="/contact"
               className={`font-medium text-[20px] transition-colors duration-300 ${linkClasses}`}
             >
               Contact
-            </a>
+            </Link>
           </div>
-
           {/* Actions */}
           <div className="flex items-center space-x-4">
             {/* <button

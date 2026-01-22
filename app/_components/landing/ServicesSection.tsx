@@ -129,7 +129,7 @@ const ServicesSection = () => {
         {services.map((service, index) => (
           <div
             key={service.id}
-            className="group relative border-r border-b border-[#E5E5E5] bg-white overflow-hidden cursor-pointer"
+            className="group relative border-r border-b border-[#aeacac] bg-white overflow-hidden cursor-pointer"
           >
             <div className="p-8 md:p-12 flex flex-col h-full min-h-[450px] transition-colors duration-500 group-hover:bg-[#F2F0EB]">
               {/* --- Icon & Tag --- */}
@@ -145,7 +145,7 @@ const ServicesSection = () => {
               {/* --- Content Area --- */}
               <div className="relative flex-grow">
                 {/* Normal State */}
-                <div className="transition-all duration-500 group-hover:opacity-0 group-hover:-translate-y-4">
+                <div className="transition-all duration-500">
                   <h3 className="font-serif text-5xl text-black mb-4">
                     {service.title}
                   </h3>
@@ -155,7 +155,7 @@ const ServicesSection = () => {
                 </div>
 
                 {/* Hover State: Revealed Image/CTA */}
-                <div className="absolute inset-0 opacity-0 translate-y-8 transition-all duration-500 group-hover:opacity-100 group-hover:translate-y-0">
+                <div className="absolute inset-0 opacity-0 translate-y-8 transition-all duration-500">
                   <div className="relative w-full h-48 mb-6 overflow-hidden rounded-lg">
                     <Image
                       src={service.image}
