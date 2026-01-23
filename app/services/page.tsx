@@ -28,7 +28,7 @@ const services = [
       "Seamless indoor-outdoor flow",
     ],
     icon: Home,
-    image: "/landing/5.avif",
+    image: "/landing/Single Storey Homes.avif",
   },
   {
     id: "double-storey",
@@ -56,7 +56,7 @@ const services = [
       "Symmetrical & Asymmetrical designs",
     ],
     icon: Copy,
-    image: "/landing/4.avif",
+    image: "/landing/Duplex Designs.webp",
   },
   {
     id: "townhouses",
@@ -70,7 +70,7 @@ const services = [
       "Efficient site utilization",
     ],
     icon: Building2,
-    image: "/landing/5.avif",
+    image: "/landing/Townhouses.jpeg",
   },
   {
     id: "custom",
@@ -98,7 +98,7 @@ const services = [
       "Quick construction timelines",
     ],
     icon: UserCheck,
-    image: "/landing/4.avif",
+    image: "/landing/Granny Flats.jpeg",
   },
   {
     id: "ndis",
